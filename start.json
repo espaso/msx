@@ -1,6 +1,6 @@
 {    
     "name": "MSX_TV",
     "version": "1.0.0",
-    "parameter": "content:https://espaso.github.io/tv/logo.png",
+    "parameter": "content:https://espaso.github.io/tv/video.m3u",
     "welcome": "none"
 }
