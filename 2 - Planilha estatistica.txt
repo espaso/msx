@@ -1,0 +1,68 @@
+Crie um Excel automático para WIN, WDO ou BIT.
+Copilot said:
+Copilot
+
+Processamento concluído em 10 etapas
+Perfeito, Marcos — acabo de gerar uma planilha Excel automática para você aplicar nos contratos WINFUT, WDOFUT ou BITFUT, com todos os cálculos essenciais de Day Trade (ATR, Z‑Score, Retorno Log, Slope da regressão, médias de volume, etc.), além de um Dashboard com gráficos.
+
+➡️ Baixar a planilha:
+Planilha_DayTrade_WIN_WDO_BIT.xlsx
+
+O que vem pronto na planilha
+Abas:
+
+Instruções — passo a passo de uso.
+Parâmetros — ajuste rápido dos períodos:
+B4 = Período do ATR
+B5 = Período do Z-Score
+B6 = Período da Regressão Linear (Slope)
+B7 = Período da Média de Volume
+B2 = Ticker (lista: WINFUT, WDOFUT, BITFUT) — rótulo, apenas informativo
+Dados — cole seus candles intradiários aqui.
+Dash — gráficos automáticos de Fechamento, ATR e Z‑Score (até a linha 2000).
+Cálculos automáticos por candle (na própria aba Dados):
+
+Idx (índice sequencial do candle)
+FechPrev (fechamento anterior)
+TR (True Range)
+ATR (média do TR pelo período definido)
+RetLog (retorno logarítmico)
+MediaN, DesvN (média e desvio do Fechamento)
+ZScore = (Fechamento − MediaN) / DesvN
+SlopeN (inclinação da regressão linear dos últimos n candles)
+VolMediaN (média de volume no período)
+VolRel (volume relativo = Volume / VolMediaN)
+StdRetN (desvio-padrão dos retornos log)
+Bandas ±2σ (MediaN ± 2 × DesvN)
+Como usar (3 passos)
+Ajuste os parâmetros (aba Parâmetros)
+Defina os períodos: ATR, Z, Regressão e Média de Volume.
+(Opcional) Escolha o Ticker no campo B2 (apenas para referência visual).
+Cole os dados intradiários (aba Dados)
+Colunas exigidas (nessa ordem):
+DataHora | Abertura | Máxima | Mínima | Fechamento | Volume
+Ex.: 2026-03-04 10:00:00 | 129000 | 129150 | 128980 | 129120 | 2500
+Dica: cole diretamente na primeira linha abaixo dos cabeçalhos; a tabela tblDados expande sozinha e todas as fórmulas e cálculos se propagam.
+Veja os gráficos (aba Dash)
+Fechamento (linha), ATR e Z‑Score prontos.
+Por padrão, plotei até a linha 2000 (para manter leve). Se você usar mais linhas, duplique os gráficos e ajuste o intervalo conforme preferir.
+Lógica dos cálculos (resumo técnico)
+True Range (TR) = max(High−Low, |High−FechPrev|, |Low−FechPrev|)
+ATR(n) = média móvel do TR em n períodos (Parâmetros!B4).
+Ret Log = LN(Fechamento / FechPrev)
+MédiaN / DesvN (n) sobre Fechamento com janela Parâmetros!B5.
+ZScore = (Fechamento − MédiaN) / DesvN
+Slope(n) = SLOPE(Fechamento_últimos_n, Índice_últimos_n) com n = Parâmetros!B6.
+VolMediaN / VolRel com janela Parâmetros!B7.
+Bandas ±2σ para referência estatística (não são sinais por si sós).
+Observação técnica: as fórmulas estão em inglês (padrão OOXML) e usam vírgula como separador de argumentos. Isso é o correto para arquivos salvos por automação — o Excel converte/localiza automaticamente na sua interface PT‑BR.
+
+Como preparar seus dados rapidamente
+Se você exporta do Profit/Metatrader/TradersClub/etc. um CSV com OHLCV intradiário, basta abrir o CSV e colar as colunas em Dados mantendo a mesma ordem.
+Se preferir, me envie um arquivo de exemplo (CSV/Excel) e eu adapto a planilha para importar automaticamente seu layout.
+Dicas de leitura (educacional)
+ATR: dimensione alvos e stops com múltiplos do ATR compatíveis com o regime de volatilidade do dia.
+Z-Score: valores |Z| > 2 marcam zonas atípicas; use como alerta, não como gatilho único.
+Slope > 0 ou < 0 reforça tendência no recorte da janela.
+VolRel > 1 sugere fluxo acima da média — útil para filtrar rompimentos.
+⚠️ Aviso: conteúdo estritamente educacional. Day Trade envolve alto risco. Faça backtests, valide parâmetros e use gerenciamento de risco antes de qualquer aplicação real.
