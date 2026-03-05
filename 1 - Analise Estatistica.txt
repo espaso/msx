@@ -1,0 +1,142 @@
+Como funciona a análise estatística em WINFUT, WDOFUT e BITFUT? Quais seriam os cálculos para aplicar no Day Trade?
+Copilot said:
+Copilot
+A seguir vou te explicar como funciona a análise estatística nos contratos WINFUT, WDOFUT e BITFUT, e também quais cálculos são realmente úteis para Day Trade.
+Sem dicas perigosas de “fórmulas mágicas”—somente estatística aplicada de verdade, com foco em leitura objetiva do mercado.
+
+✅ 1. O que são WINFUT, WDOFUT e BITFUT?
+Todos são contratos futuros da B3:
+
+Ativo	Descrição
+WINFUT	Mini-índice (derivado do índice Bovespa – IBOV)
+WDOFUT	Mini-dólar (derivado do USD/BRL futuro)
+BITFUT	Mini contrato de Bitcoin futuro (derivado da cotação BTC/BRL)
+Eles se comportam como séries temporais — dados numéricos ao longo do tempo, ideais para análise estatística.
+
+✅ 2. Estatísticas essenciais para Day Trade
+No Day Trade, os cálculos mais relevantes são:
+
+🔹 2.1. Volatilidade intradiária (ATR ou desvio padrão)
+Ajuda a responder: “Quanto o ativo costuma andar?”
+
+ATR (Average True Range):
+ATR = média dos True Range dos últimos n candles
+True Range = maior de:
+
+Máxima – Mínima
+|Máxima – Fechamento anterior|
+|Mínima – Fechamento anterior|
+👉 Útil para:
+
+definir stop-loss realista
+medir força do mercado
+evitar operar em consolidação
+🔹 2.2. Desvio Padrão (σ)
+Uma forma de medir dispersão dos preços.
+
+σ = sqrt( Σ (preço - média)² / n )
+Ajuda a identificar:
+
+momentos atípicos
+risco por trade
+intensidade de movimentos
+🔹 2.3. Probabilidade de movimento (Distribuição estatística)
+Usado para saber se o preço está “barato” ou “caro” em relação ao comportamento típico.
+
+Se o ativo se afasta 2 desvios padrão, estatisticamente:
+
+~95% das vezes o preço está em região extrema.
+Isso não gera entrada automática, mas alerta sobre zonas atípicas.
+
+🔹 2.4. Retornos Logarítmicos (log returns)
+Melhor que retornos percentuais para séries intradiárias.
+
+ret_log = ln(Preço_t / Preço_(t-1))
+Útil para:
+
+medir assimetria
+detectar mudanças de regime
+preparar modelos preditivos simples
+🔹 2.5. Correlação entre ativos
+WINFUT e WDOFUT têm correlação forte e inversa, normalmente:
+
+WIN sobe → dólar tende a cair
+dólar sobe → WIN tende a cair
+Cálculo:
+
+corr = cov(X, Y) / (σx * σy)
+Correlação	Interpretação
+-1	inversamente relacionados
+0	independentes
++1	relacionados diretamente
+🔹 2.6. Reversão à média (mean reversion)
+Funciona melhor no WDOFUT e BITFUT em consolidações.
+
+Cálculo básico:
+
+z-score = (preço - média) / desvio padrão
+z-score > +2 → preço esticado para cima
+z-score < -2 → esticado para baixo
+🔹 2.7. Intensidade da tendência (Regressão Linear)
+Inclinação da reta representa força da tendência:
+
+y = a + bx
+b > 0 → tendência de alta
+b < 0 → tendência de baixa
+|b| maior → tendência mais forte
+🔹 2.8. Liquidez e fluxo estatístico
+Especialmente útil no WDO e WIN:
+
+Indicadores estatísticos:
+
+média de volume por candle
+densidade de negócio por nível de preço
+distribuição do fluxo agressor
+probabilidade de rompimento por volume
+✔️ 3. Como aplicar no Day Trade — na prática
+Abaixo um modelo usado por traders quantitativos simples:
+
+⭐ PASSO 1 — Medir volatilidade diária
+Use ATR de 14 períodos no gráfico de 5 min.
+
+⭐ PASSO 2 — Identificar regime do mercado
+Regimes comuns:
+
+Alta volatilidade + forte tendência
+Alta volatilidade + sem direção
+Baixa volatilidade + consolidação
+Baixa volatilidade + tendência fraca
+Indicadores usados:
+
+desvio padrão
+inclinação da regressão linear
+ATR
+⭐ PASSO 3 — Entradas estatísticas típicas
+A) Tendência
+Entrada com:
+
+regressão linear inclinada
+preço acima da média
+volume crescente
+Stop: múltiplos do ATR.
+
+B) Reversão
+Entrada quando:
+
+z-score > +2 ou < -2
+candle mostra rejeição
+C) Rompimento estatístico
+Funciona muito bem no WIN e WDO:
+
+desvio padrão aumentando
+volume 2× acima da média
+candle rompendo máximas/mínimas
+✔️ 4. Resumo dos cálculos essenciais
+Cálculo	Por que usar?
+ATR	Stop, volatilidade e faixa intradiária
+Desvio padrão	Identificar extremos e mudanças de regime
+Retornos logarítmicos	Estatística de séries temporais
+Correlação	Relação WIN × WDO
+Z-score	Reversão à média
+Regressão Linear	Confirmar tendência
+Médias de volume	Projeção de rompimentos
