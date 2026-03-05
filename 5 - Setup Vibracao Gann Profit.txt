@@ -1,0 +1,363 @@
+Pode gerar a Lei da Vibração de Gann aplicado NA PRÁTICA no WIN, WDO ou BITFUT adpatada para o profit da nelogica
+Copilot said:
+Copilot
+
+Processamento concluído em 13 etapas
+Aviso rápido e sincero (educacional, não‑recomendação): o que segue é material técnico para estudo e simulação. Não opere dinheiro real sem backtest/forward test, gestão de risco e validações independentes. Use primeiro no Simulador do Profit/Vector.
+nelogica
++1
+
+Marcos, preparei a Lei da Vibração de Gann – na prática – adaptada para o Profit (NTSL) em duas peças:
+
+Indicador (visual) para detectar sincronia de Tempo + Preço.
+Estratégia de Execução (opcional) para automatizar entradas e saídas.
+Também deixei presets para WIN, WDO e BIT, e o passo a passo de como instalar/automatizar no Profit.
+
+1) Como instalar os códigos no Profit (NTSL)
+Abra o Editor de Estratégias → Estratégias ▸ Editor de Estratégias (Profit Pro/Ultra).
+nelogica
+Clique em Nova Estratégia e escolha o tipo (Indicadores para o estudo visual; Execução para o robô).
+nelogica
+Cole o código abaixo, Compile e aplique no gráfico. (Ordem/alertas/plots são feitos via funções NTSL do Profit.)
+nelogica
+Para automatizar (opcional): Estratégias ▸ Automação de Estratégias → Nova Estratégia → selecione sua Estratégia de Execução e configure conta, ativo, quantidade, risco/segurança.
+nelogica
++1
+Referências úteis (funções e exemplos NTSL): documentação oficial/compilado, lista de funções (BuyAtMarket, SellShortAtMarket, …), e snippets/boas práticas.
+nelogica
++3
+
+2) Indicador – Gann Vibration (Tempo+Preço) – NTSL (Estratégia de Indicadores)
+O que faz: marca quando amplitude (Vibrações) e duração (Ciclos) coincidem e há candle de reversão com filtros (ATR, Volume, VWAP/MA21). Gera alerta e plota o preço com sinal “LONG/SHORT”.
+
+Atenção: NTSL é Pascal‑like; funções de plot/alarme e nomes dos dados (Open, High, Low, Close, Volume) seguem o padrão do Profit. Ajuste nomes de funções caso sua versão use variantes.
+nelogica
++1
+
+{===========================================
+  Indicador: Gann Vibration (Tempo + Preço)
+  Tipo: Estratégia de Indicadores (NTSL)
+  Autor: M365 Copilot (educacional)
+===========================================}
+
+Input
+  // Ciclos de tempo (em candles)
+  Cycle1(8), Cycle2(13), Cycle3(21), Cycle4(34),
+  // Vibrações de preço (pontos/US$)
+  Vib1(300.0), Vib2(500.0), Vib3(600.0), Vib4(800.0),
+  // Filtros
+  TolPerc(10.0),      // tolerância % para "bater" vibração
+  MinATR(100.0),      // piso de volatilidade (ajuste por ativo)
+  UseVWAP(True),
+  UseMA21(True);
+
+Var
+  lastPivotPrice : Float;
+  lastPivotDir   : Integer; // +1 topo, -1 fundo
+  barsFromPivot  : Integer;
+  priceMoveAbs   : Float;
+
+  atr14, vwapVal, ma21, volMA20 : Float;
+  inPriceVibration, inTimeCycle : Boolean;
+  syncCondition, atrFilter, volFilter, vwapFilter, ma21Filter : Boolean;
+  revBull, revBear, longSignal, shortSignal : Boolean;
+
+  // util
+  tol1, tol2, tol3, tol4 : Float;
+
+Begin
+  // Indicadores básicos
+  atr14    := ATR(14);
+  vwapVal  := VWAP(10);
+  ma21     := Media(Close, 21);
+  volMA20  := Media(Volume, 20);
+
+  // --- DETECÇÃO DE PIVÔ SIMPLES (pivô simétrico curto) ---
+  if (High[1] > High[2]) and (High[1] > High) then
+  begin
+    lastPivotPrice := High[1];
+    lastPivotDir   := +1;     // topo → tendência posterior de baixa
+    barsFromPivot  := 0;
+  end
+  else if (Low[1] < Low[2]) and (Low[1] < Low) then
+  begin
+    lastPivotPrice := Low[1];
+    lastPivotDir   := -1;     // fundo → tendência posterior de alta
+    barsFromPivot  := 0;
+  end
+  else
+    barsFromPivot  := barsFromPivot + 1;
+
+  // Amplitude desde o pivô
+  if lastPivotDir = +1 then
+    priceMoveAbs := Abs(lastPivotPrice - Close)
+  else if lastPivotDir = -1 then
+    priceMoveAbs := Abs(Close - lastPivotPrice)
+  else
+    priceMoveAbs := 0;
+
+  // --- TESTE DE VIBRAÇÕES DE PREÇO (± tolerância %) ---
+  tol1 := Vib1 * (TolPerc/100.0);
+  tol2 := Vib2 * (TolPerc/100.0);
+  tol3 := Vib3 * (TolPerc/100.0);
+  tol4 := Vib4 * (TolPerc/100.0);
+
+  inPriceVibration :=
+       (Abs(priceMoveAbs - Vib1) <= tol1)
+    or (Abs(priceMoveAbs - Vib2) <= tol2)
+    or (Abs(priceMoveAbs - Vib3) <= tol3)
+    or (Abs(priceMoveAbs - Vib4) <= tol4);
+
+  // --- TESTE DE CICLOS DE TEMPO (± 1 candle) ---
+  inTimeCycle :=
+       (barsFromPivot = Cycle1) or (barsFromPivot = Cycle1-1) or (barsFromPivot = Cycle1+1)
+    or (barsFromPivot = Cycle2) or (barsFromPivot = Cycle2-1) or (barsFromPivot = Cycle2+1)
+    or (barsFromPivot = Cycle3) or (barsFromPivot = Cycle3-1) or (barsFromPivot = Cycle3+1)
+    or (barsFromPivot = Cycle4) or (barsFromPivot = Cycle4-1) or (barsFromPivot = Cycle4+1);
+
+  // --- CANDLE DE REVERSÃO (força contrária + range ≥ ATR) ---
+  revBull := (lastPivotDir = +1) and (Close > Open) and ((High - Low) >= atr14);
+  revBear := (lastPivotDir = -1) and (Close < Open) and ((High - Low) >= atr14);
+
+  // --- FILTROS DE CONTEXTO ---
+  atrFilter  := atr14 >= MinATR;
+  volFilter  := Volume > volMA20;
+  if UseVWAP then
+    vwapFilter := (lastPivotDir = +1) ? (Close < vwapVal) : (Close > vwapVal)
+  else
+    vwapFilter := True;
+
+  if UseMA21 then
+    ma21Filter := (lastPivotDir = +1) ? (Close < ma21) : (Close > ma21)
+  else
+    ma21Filter := True;
+
+  // --- SINAL FINAL ---
+  syncCondition := inPriceVibration and inTimeCycle;
+  longSignal  := syncCondition and revBull  and atrFilter and volFilter and vwapFilter and ma21Filter;
+  shortSignal := syncCondition and revBear  and atrFilter and volFilter and vwapFilter and ma21Filter;
+
+  // --- PLOTS E ALERTAS ---
+  Plot(Close); // preço
+  if longSignal  then Alert($00FF00); // verde
+  if shortSignal then Alert($FF0000); // vermelho
+
+End.
+
+Mostrar mais linhas
+Observação: Alert, Plot, ATR, VWAP, Media, séries Open/High/Low/Close/Volume e indexação [n] fazem parte do ecossistema NTSL/Profit. Se alguma função estiver indisponível na sua edição, substitua por equivalentes listados na documentação/funções do Profit.
+nelogica
++2
+
+3) Robô – Gann Vibration Execução – NTSL (Estratégia de Execução)
+O que faz: quando surge sinal (Tempo+Preço sincronizados + reversão), envia ordens e coloca Stop e Alvo (TP) automáticos. Funções de envio/gestão de ordens são nativas do Profit (BuyAtMarket, SellShortAtMarket, …).
+neotraderbot
++1
+
+{=============================================================
+  Estratégia de Execução: Gann Vibration (Tempo + Preço)
+  Tipo: Estratégia de Execução (Backtest/Automação)
+  Autor: M365 Copilot (educacional)
+==============================================================}
+
+Input
+  // --- Presets de Ciclo e Vibração ---
+  Cycle1(8), Cycle2(13), Cycle3(21), Cycle4(34),
+  Vib1(300.0), Vib2(500.0), Vib3(600.0), Vib4(800.0),
+  TolPerc(10.0), MinATR(100.0),
+
+  // --- Filtros ---
+  UseVWAP(True), UseMA21(True),
+
+  // --- Execução ---
+  Qty(1),                 // contratos
+  RTarget(1.0),           // alvo em múltiplos do risco (1.0 = 1:1)
+  StopMode(1),            // 1=candle de reversão; 2=metade da vibração "batida"
+  MaxTradesPerDay(3);
+
+Var
+  // Núcleo (mesmo do Indicador)
+  lastPivotPrice : Float;
+  lastPivotDir   : Integer;
+  barsFromPivot  : Integer;
+  priceMoveAbs   : Float;
+  atr14, vwapVal, ma21, volMA20 : Float;
+  inPriceVibration, inTimeCycle, syncCondition : Boolean;
+  revBull, revBear, atrFilter, volFilter, vwapFilter, ma21Filter : Boolean;
+  tol1, tol2, tol3, tol4 : Float;
+
+  // Execução
+  tradesToday : Integer;
+  entryPrice, stopPrice, targetPrice : Float;
+  canEnter : Boolean;
+
+  // Bookkeeping simples por dia
+  currentDate : Integer;
+
+Begin
+  // Reset contador de trades por dia
+  if Date <> currentDate then
+  begin
+    currentDate := Date;
+    tradesToday := 0;
+  end;
+
+  // Indicadores/Técnicos
+  atr14    := ATR(14);
+  vwapVal  := VWAP(10);
+  ma21     := Media(Close, 21);
+  volMA20  := Media(Volume, 20);
+
+  // Pivô simples
+  if (High[1] > High[2]) and (High[1] > High) then
+  begin
+    lastPivotPrice := High[1]; lastPivotDir := +1; barsFromPivot := 0;
+  end
+  else if (Low[1] < Low[2]) and (Low[1] < Low) then
+  begin
+    lastPivotPrice := Low[1];  lastPivotDir := -1; barsFromPivot := 0;
+  end
+  else
+    barsFromPivot := barsFromPivot + 1;
+
+  // Amplitude
+  if lastPivotDir = +1 then priceMoveAbs := Abs(lastPivotPrice - Close)
+  else if lastPivotDir = -1 then priceMoveAbs := Abs(Close - lastPivotPrice)
+  else priceMoveAbs := 0;
+
+  // Vibrações (± tolerância %)
+  tol1 := Vib1 * (TolPerc/100.0);
+  tol2 := Vib2 * (TolPerc/100.0);
+  tol3 := Vib3 * (TolPerc/100.0);
+  tol4 := Vib4 * (TolPerc/100.0);
+
+  inPriceVibration :=
+       (Abs(priceMoveAbs - Vib1) <= tol1)
+    or (Abs(priceMoveAbs - Vib2) <= tol2)
+    or (Abs(priceMoveAbs - Vib3) <= tol3)
+    or (Abs(priceMoveAbs - Vib4) <= tol4);
+
+  // Ciclos (±1)
+  inTimeCycle :=
+       (barsFromPivot = Cycle1) or (barsFromPivot = Cycle1-1) or (barsFromPivot = Cycle1+1)
+    or (barsFromPivot = Cycle2) or (barsFromPivot = Cycle2-1) or (barsFromPivot = Cycle2+1)
+    or (barsFromPivot = Cycle3) or (barsFromPivot = Cycle3-1) or (barsFromPivot = Cycle3+1)
+    or (barsFromPivot = Cycle4) or (barsFromPivot = Cycle4-1) or (barsFromPivot = Cycle4+1);
+
+  // Reversão + filtros
+  revBull   := (lastPivotDir = +1) and (Close > Open) and ((High - Low) >= atr14);
+  revBear   := (lastPivotDir = -1) and (Close < Open) and ((High - Low) >= atr14);
+  atrFilter := atr14 >= MinATR;
+  volFilter := Volume > volMA20;
+
+  if UseVWAP then
+    vwapFilter := (lastPivotDir = +1) ? (Close < vwapVal) : (Close > vwapVal)
+  else
+    vwapFilter := True;
+
+  if UseMA21 then
+    ma21Filter := (lastPivotDir = +1) ? (Close < ma21) : (Close > ma21)
+  else
+    ma21Filter := True;
+
+  syncCondition := inPriceVibration and inTimeCycle;
+  canEnter := (tradesToday < MaxTradesPerDay) and (not HasPosition());
+
+  // ==============================
+  // ENTRADA COMPRADA (REVERSÃO DE BAIXA)
+  // ==============================
+  if canEnter and syncCondition and revBull and atrFilter and volFilter and vwapFilter and ma21Filter then
+  begin
+    // Entrada a mercado no fechamento da barra do sinal
+    BuyAtMarket(Qty);
+    entryPrice := Close;
+
+    // STOP
+    if StopMode = 1 then
+      stopPrice := Low  // atrás do candle de reversão
+    else
+      // metade da vibração batida
+      stopPrice := entryPrice - (priceMoveAbs * 0.5);
+
+    // ALVO
+    targetPrice := entryPrice + RTarget * (entryPrice - stopPrice);
+
+    // Envia Saídas
+    SellToCoverLimit(targetPrice, Qty);
+    SellToCoverStop(stopPrice, stopPrice, Qty);
+
+    tradesToday := tradesToday + 1;
+    Alert($00FF00);
+  end;
+
+  // ==============================
+  // ENTRADA VENDIDA (REVERSÃO DE ALTA)
+  // ==============================
+  if canEnter and syncCondition and revBear and atrFilter and volFilter and vwapFilter and ma21Filter then
+  begin
+    SellShortAtMarket(Qty);
+    entryPrice := Close;
+
+    if StopMode = 1 then
+      stopPrice := High
+    else
+      stopPrice := entryPrice + (priceMoveAbs * 0.5);
+
+    targetPrice := entryPrice - RTarget * (stopPrice - entryPrice);
+
+    BuyToCoverLimit(targetPrice, Qty);
+    BuyToCoverStop(stopPrice, stopPrice, Qty);
+
+    tradesToday := tradesToday + 1;
+    Alert($FF0000);
+  end;
+
+End.
+
+Mostrar mais linhas
+Sobre as funções de ordem: BuyAtMarket, SellShortAtMarket, SellToCoverLimit/Stop, BuyToCoverLimit/Stop, além de HasPosition, IsBought/IsSold, etc., são funções padrão do módulo de estratégias do Profit (NTSL). Consulte a lista e o PDF de referência para variações e detalhes.
+schiller
++1
+
+4) Presets iniciais por ativo (sugestões para inputs)
+Use gráfico de 5m para começar. Ajuste depois de backtest.
+
+WINFUT (mini índice)
+Ciclos: 8, 13, 21, 34
+Vibrações (pts): 300, 500, 600, 800
+MinATR: 100–120
+TolPerc: 10%
+WDOFUT (mini dólar)
+Ciclos: 8, 13, 21
+Vibrações (pts): 8, 12, 16, 20
+MinATR: 6–8
+TolPerc: 10–12%
+BITFUT (Bitcoin futuro)
+Ciclos: 13, 21, 34
+Vibrações (US$): 100, 200, 300, 400
+MinATR: 90–120
+TolPerc: 8–10%
+Dica de plataforma: configure e salve layouts e estudos por tempo/layout para alternar entre 5m/13m, VWAP/MA21, etc. (vídeos “Profit na Prática”).
+youtube
++1
+
+5) Automatizando no Profit (resumo prático)
+Crie a Estratégia de Execução no Editor e compile.
+nelogica
+Abra Automação de Estratégias → Nova Estratégia → selecione a estratégia que você criou.
+nelogica
+Em Geral: conta (simulada primeiro), ativo (WIN/WDO/BIT), periodicidade, quantidade.
+nelogica
+Em Entrada/Saída/Risco/Segurança: defina limites, horários e modo de execução (tick‑a‑tick, se aplicável).
+nelogica
+Execute e monitore (sumário/estatísticas). Para estudo de automação passo a passo, veja o vídeo oficial.
+youtube
+6) Checklist de backtest/validação
+Teste 3–6 meses no Replay/Backtest. Anote: ciclo (tempo), vibração (preço), R múltiplo, resultado, horário.
+Otimize duas vibrações por ativo (as que mais “batem”) e tolerância (8–12%).
+Limite de trades/dia (3) e risco por trade (0,5–1% do capital).
+Evite janelas com notícias de alto impacto (CPI/FED/Payroll; Copom).
+Automação apenas depois do forward test (simulador) apresentar consistência.
+7) Quer que eu te entregue o arquivo pronto (.PSF)?
+Se preferir, eu exporto em .psf (estudo + execução) com presets pra WIN/WDO/BIT e regras visuais (coloração) para facilitar a leitura. Também posso incluir travas de horário, breakeven e trailing como nos snippets de boas práticas.
+neotraderbot
