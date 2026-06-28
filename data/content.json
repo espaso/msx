@@ -1,6 +1,4 @@
 {
-  "response": {
-    "status": "ok",
     "type": "list",
     "items": [
       {
@@ -20,4 +18,4 @@
       }
     ]
   }
-}
+
