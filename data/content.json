@@ -1,6 +1,6 @@
 {
         "type": "button",
         "title": "Vídeo 3",
-        "action": "video:https://espaso.github.io/tv/video.flv"
+        "action": "video:https://espaso.github.io/tv/logo"
 }
 
