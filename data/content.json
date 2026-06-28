@@ -1,24 +1,30 @@
 {
-  "playlistName": "Meus Vídeos do Google Drive",
-  "version": "1.0",
-  "videos": [
-    {
-      "id": "1",
-      "title": "Vídeo de Exemplo 1",
-      "description": "Descrição do primeiro vídeo hospedado no Drive.",
-      "duration": "05:24",
-      "thumbnail": "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=500",
-      "videoUrl": "https://www.googleapis.com/drive/v3/files/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4",
-      "embedUrl": "https://drive.google.com/file/d/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh/preview"
-    },
-    {
-      "id": "2",
-      "title": "Vídeo de Exemplo 2",
-      "description": "Descrição do segundo vídeo hospedado no Drive.",
-      "duration": "12:40",
-      "thumbnail": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500",
-      "videoUrl": "https://www.googleapis.com/drive/v3/files/1agVi_Y4usOv36tYPVsWPOMj40gVOB_J3?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4",
-      "embedUrl": "https://drive.google.com/file/d/1agVi_Y4usOv36tYPVsWPOMj40gVOB_J3/preview"
-    }
-  ]
+  "response": {
+    "status": "ok",
+    "name": "Minha Playlist Drive",
+    "type": "list",
+    "headline": "Vídeos do Google Drive",
+    "items": [
+      {
+        "type": "space",
+        "layout": "0,0,4,1",
+        "title": "Filmes e Vídeos",
+        "titleFooter": "Selecione para reproduzir"
+      },
+      {
+        "type": "button",
+        "layout": "0,1,2,2",
+        "title": "Vídeo de Exemplo 1",
+        "icon": "movie",
+        "action": "video:https://www.googleapis.com/drive/v3/files/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+      },
+      {
+        "type": "button",
+        "layout": "2,1,2,2",
+        "title": "Vídeo de Exemplo 2",
+        "icon": "video_library",
+        "action": "video:https://www.googleapis.com/drive/v3/files/1agVi_Y4usOv36tYPVsWPOMj40gVOB_J3?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+      }
+    ]
+  }
 }
