@@ -1,3 +1,23 @@
 {
-  "action": "video:https://www.googleapis.com/drive/v3/files/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+  "response": {
+    "status": "ok",
+    "type": "list",
+    "items": [
+      {
+        "type": "button",
+        "title": "Vídeo 1",
+        "action": "video:https://www.googleapis.com/drive/v3/files/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+      },
+      {
+        "type": "button",
+        "title": "Vídeo 2",
+        "action": "video:https://m.youtube.com/watch?v=rKMwqeouGx8"
+      },
+      {
+        "type": "button",
+        "title": "Vídeo 3",
+        "action": "video:https://m.youtube.com/watch?v=rKMwqeouGx8"
+      }
+    ]
+  }
 }
