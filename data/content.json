@@ -16,14 +16,14 @@
         "layout": "0,1,2,2",
         "title": "Vídeo de Exemplo 1",
         "icon": "movie",
-        "action": "video:https://www.googleapis.com/drive/v3/files/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+        "action": "video:https://m.youtube.com/watch?v=rKMwqeouGx8"
       },
       {
         "type": "button",
         "layout": "2,1,2,2",
         "title": "Vídeo de Exemplo 2",
         "icon": "video_library",
-        "action": "video:https://www.googleapis.com/drive/v3/files/1agVi_Y4usOv36tYPVsWPOMj40gVOB_J3?alt=media&key=AIzaSyAEc8rACsKgkatu6m_mE9jpCg_TQ-G9nb4"
+        "action": "video:https://m.youtube.com/watch?v=rKMwqeouGx8"
       }
     ]
   }
