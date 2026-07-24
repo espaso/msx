@@ -1,15 +1,36 @@
 {
-  "name": "Minha Página HTML",
+  "name": "Meus Vídeos Hub",
   "version": "1.0.0",
-  "parameter": "menu:html_full",
+  "parameter": "menu:home",
   "pages": [
     {
-      "id": "html_full",
+      "id": "home",
       "items": [
         {
-          "type": "space",
-          "layout": "0,0,12,12",
-          "action": "link:https://espaso.github.io/dial"
+          "type": "button",
+          "layout": "0,0,12,1",
+          "label": "SEÇÃO YOUTUBE",
+          "focus": false
+        },
+        {
+          "type": "video",
+          "layout": "0,1,4,3",
+          "title": "Vídeo do YouTube 1",
+          "icon": "https://youtube.com",
+          "action": "video:plugin:http://benzac.de"
+        },
+        {
+          "type": "button",
+          "layout": "0,5,12,1",
+          "label": "SEÇÃO ONEDRIVE",
+          "focus": false
+        },
+        {
+          "type": "video",
+          "layout": "0,6,4,3",
+          "title": "Meu Vídeo OneDrive",
+          "icon": "https://placeholder.com",
+          "action": "video:plugin:http://benzac.de"
         }
       ]
     }
