@@ -1,0 +1,17 @@
+{
+  "name": "Minha Página HTML",
+  "version": "1.0.0",
+  "parameter": "menu:html_full",
+  "pages": [
+    {
+      "id": "html_full",
+      "items": [
+        {
+          "type": "space",
+          "layout": "0,0,12,12",
+          "action": "link:https://espaso.github.io/dial/index.html"
+        }
+      ]
+    }
+  ]
+}
