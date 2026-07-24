@@ -1,36 +1,51 @@
 {
-  "name": "Meus Vídeos Hub",
+  "name": "Meu Menu de Vídeos",
   "version": "1.0.0",
-  "parameter": "menu:home",
+  "parameter": "menu:inicio",
   "pages": [
     {
-      "id": "home",
+      "id": "inicio",
       "items": [
         {
-          "type": "button",
+          "type": "space",
           "layout": "0,0,12,1",
-          "label": "SEÇÃO YOUTUBE",
-          "focus": false
+          "label": "VÍDEOS DO YOUTUBE",
+          "labelColor": "#FF0000"
         },
         {
           "type": "video",
           "layout": "0,1,4,3",
           "title": "Vídeo do YouTube 1",
           "icon": "https://youtube.com",
-          "action": "video:plugin:http://benzac.de"
-        },
-        {
-          "type": "button",
-          "layout": "0,5,12,1",
-          "label": "SEÇÃO ONEDRIVE",
-          "focus": false
+          "action": "video:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
         },
         {
           "type": "video",
-          "layout": "0,6,4,3",
-          "title": "Meu Vídeo OneDrive",
-          "icon": "https://placeholder.com",
-          "action": "video:plugin:http://benzac.de"
+          "layout": "4,1,4,3",
+          "title": "Vídeo do YouTube 2",
+          "icon": "https://youtube.com",
+          "action": "video:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
+        },
+        {
+          "type": "space",
+          "layout": "0,4,12,1",
+          "label": "VÍDEOS DO ONEDRIVE",
+          "labelColor": "#0078D4",
+          "line": true
+        },
+        {
+          "type": "video",
+          "layout": "0,5,4,3",
+          "title": "Meu Vídeo OneDrive 1",
+          "icon": "https://unsplash.com",
+          "action": "video:plugin:https://1drv.ms/v/c/7b19b5cbe8279a27/IQR22lBqeIK3SohUlBNxuIixASncw3ctO-zk75sNVdBeqCY"
+        },
+        {
+          "type": "video",
+          "layout": "4,5,4,3",
+          "title": "Meu Vídeo OneDrive 2",
+          "icon": "https://unsplash.com",
+          "action": "video:plugin:https://1drv.ms/v/c/7b19b5cbe8279a27/IQR22lBqeIK3SohUlBNxuIixASncw3ctO-zk75sNVdBeqCY"
         }
       ]
     }
