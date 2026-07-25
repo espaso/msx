@@ -1,6 +1,9 @@
 {
-  "name": "Start Dial",
-  "version": "1.0.0",
-  "parameter": "link:https://espaso.github.io/dial/",
-  "welcome": "none"
+	"pages": [{
+			"items": [{
+					"title": "Speed Dial",
+					"image": "",
+					"action": "link:https://espaso.github.io/dial/"
+			}]
+	}]
 }
