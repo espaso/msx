@@ -1,14 +1,57 @@
 {
   "pages": [
     {
+      "title": "YouTube",
       "items": [
         {
-          "title": "YouTube Exemplo",
-          "action": "video:https://www.youtube.com/watch?v=lUSiUx0ZuL4"
+          "title": "Vídeo Exemplo 1",
+          "image": "https://img.youtube.com/vi/lUSiUx0ZuL4/hqdefault.jpg",
+          "action": "video:https://youtu.be/lUSiUx0ZuL4"
         },
         {
-          "title": "OneDrive Exemplo",
-          "action": "video:https://1drv.ms/v/c/7b19b5cbe8279a27/IQR22lBqeIK3SohUlBNxuIixASncw3ctO-zk75sNVdBeqCY"
+          "title": "Vídeo Exemplo 2",
+          "image": "https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg",
+          "action": "video:https://youtu.be/VIDEO_ID"
+        }
+      ]
+    },
+    {
+      "title": "OneDrive",
+      "items": [
+        {
+          "title": "Treinamento",
+          "icon": "msx:white:play",
+          "action": "video:https://LINK-DIRETO-MP4"
+        },
+        {
+          "title": "Apresentação",
+          "icon": "msx:white:play",
+          "action": "video:https://LINK-DIRETO-MP4"
+        }
+      ]
+    },
+    {
+      "title": "Filmes",
+      "items": [
+        {
+          "title": "Filme 1",
+          "icon": "msx:white:movie",
+          "action": "video:https://servidor/filme1.mp4"
+        },
+        {
+          "title": "Filme 2",
+          "icon": "msx:white:movie",
+          "action": "video:https://servidor/filme2.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Favoritos",
+      "items": [
+        {
+          "title": "Canal YouTube",
+          "icon": "msx:white:youtube",
+          "action": "link:https://youtube.com"
         }
       ]
     }
