@@ -1,6 +1,6 @@
-{
-  "name": "Start Dial",
-  "version": "1.0.0",
-  "parameter": "link:https://espaso.github.io/dial/",
-  "welcome": "none"
+{    
+    "name": "Start StremioMSX",
+    "version": "1.0.0",
+    "parameter": "content:https://espaso.github.io/msx/data/content.json",
+    "welcome": "none"
 }
