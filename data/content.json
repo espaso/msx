@@ -4,11 +4,11 @@
       "items": [
         {
           "title": "YouTube Exemplo",
-          "action": "video:https://youtu.be/lUSiUx0ZuL4"
+          "action": "video:https://www.youtube.com/watch?v=lUSiUx0ZuL4"
         },
         {
           "title": "OneDrive Exemplo",
-          "action": "video:LINK_DIRETO_MP4"
+          "action": "video:https://1drv.ms/v/c/7b19b5cbe8279a27/IQR22lBqeIK3SohUlBNxuIixASncw3ctO-zk75sNVdBeqCY"
         }
       ]
     }
