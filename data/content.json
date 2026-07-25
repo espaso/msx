@@ -3,10 +3,12 @@
     {
       "items": [
         {
-          "type": "default",
-          "title": "Speed Dial",
-          "icon": "msx:white:web",
-          "action": "link:https://espaso.github.io/dial/"
+          "title": "YouTube Exemplo",
+          "action": "video:https://youtu.be/lUSiUx0ZuL4"
+        },
+        {
+          "title": "OneDrive Exemplo",
+          "action": "video:LINK_DIRETO_MP4"
         }
       ]
     }
