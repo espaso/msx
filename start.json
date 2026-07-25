@@ -1,0 +1,6 @@
+{
+  "menu": [{
+    "title": "Speed Dial",
+    "action": "link:https://espaso.github.io/dial/"
+  }]
+}
