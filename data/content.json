@@ -1,9 +1,12 @@
 {
-	"pages": [{
-			"items": [{
-					"title": "Speed Dial",
-					"image": "",
-					"action": "link:https://espaso.github.io/dial/"
-			}]
-	}]
+  "pages": [
+    {
+      "items": [
+        {
+          "title": "Google",
+          "action": "link:https://www.google.com"
+        }
+      ]
+    }
+  ]
 }
