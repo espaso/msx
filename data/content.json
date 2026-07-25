@@ -1,0 +1,19 @@
+{
+  "pages": [
+    {
+      "title": "Minha Biblioteca",
+      "items": [
+        {
+          "title": "YouTube Exemplo",
+          "image": "https://img.youtube.com/vi/lUSiUx0ZuL4/maxresdefault.jpg",
+          "action": "video:https://youtu.be/lUSiUx0ZuL4"
+        },
+        {
+          "title": "Vídeo OneDrive",
+          "icon": "msx:white:play",
+          "action": "video:https://LINK-DIRETO-MP4"
+        }
+      ]
+    }
+  ]
+}
