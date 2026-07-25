@@ -3,8 +3,10 @@
     {
       "items": [
         {
-          "title": "Google",
-          "action": "link:https://www.google.com"
+          "type": "default",
+          "title": "Speed Dial",
+          "icon": "msx:white:web",
+          "action": "link:https://espaso.github.io/dial/"
         }
       ]
     }
