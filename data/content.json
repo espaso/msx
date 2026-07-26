@@ -1,13 +1,23 @@
 {
-  "name": "Pagina Principal",
+  "name": "Meu Portal de Mídia",
   "pages": [
     {
-      "name": "Filmes e Videos",
+      "name": "Vídeos do YouTube",
       "items": [
         {
-          "title": "Exemplo de Video",
-          "image": "https://placeholder.com",
-          "action": "play:https://espaso.github.io/tv/logo.png"
+          "title": "Vídeo do YouTube Exemplo 1",
+          "image": "https://youtube.com",
+          "action": "video:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
+        }
+      ]
+    },
+    {
+      "name": "Nuvem OneDrive",
+      "items": [
+        {
+          "title": "Meu Filme no OneDrive",
+          "image": "https://unsplash.com",
+          "action": "play:https://onedrive.live.com/personal/7b19b5cbe8279a27/Documents/Revis%C3%A3o%20de%20materia%20Rompimento%20e%20m%C3%A9dias%20aul%20001%20Marquinhos.mp4"
         }
       ]
     }
