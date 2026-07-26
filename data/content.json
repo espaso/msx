@@ -1,8 +1,8 @@
 {
-  "type": "space",
+  "type": "menu",
   "headline": "Minha Central de Mídia",
   "color": "msx-black",
-  "sections": [
+  "menu": [
     {
       "headline": "YouTube & Conteúdos da Web",
       "color": "msx-red",
