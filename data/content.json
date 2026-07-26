@@ -20,7 +20,7 @@
          "badgeColor": "#1ab7ea",
          "title": "Example Video",
          "playerLabel": "Vimeo - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?id={asset:id:Revis%C3%A3o%20de%20materia%20Rompimento%20e%20m%C3%A9dias%20aul%20001%20Marquinhos.mp4}"
+         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?id=Revis%C3%A3o%20de%20materia%20Rompimento%20e%20m%C3%A9dias%20aul%20001%20Marquinhos.mp4}"
       },
       {
          "badge": "{txt:msx-white:Dailymotion}",
