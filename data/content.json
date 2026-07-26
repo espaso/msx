@@ -1,33 +1,20 @@
+
 {
-  "type": "menu",
   "headline": "Minha Central de Mídia",
-  "color": "msx-black",
-  "menu": [
+  "items": [
     {
-      "headline": "YouTube & Conteúdos da Web",
-      "color": "msx-red",
-      "items": [
-        {
-          "title": "Trailers no YouTube",
-          "label": "YouTube",
-          "icon": "play-arrow",
-          "badge": "4K",
-          "action": "video:plugin:youtube:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
-        }
-      ]
+      "title": "Trailers no YouTube",
+      "label": "YouTube",
+      "icon": "play-arrow",
+      "badge": "4K",
+      "action": "video:plugin:youtube:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
     },
     {
-      "headline": "Vídeos do OneDrive",
-      "color": "msx-blue",
-      "items": [
-        {
-          "title": "Filme da Família",
-          "label": "Nuvem",
-          "icon": "movie",
-          "badge": "HD",
-          "action": "video:https://onedrive.live.com/personal/7b19b5cbe8279a27/Documents/Revis%C3%A3o%20de%20materia%20Rompimento%20e%20m%C3%A9dias%20aul%20001%20Marquinhos.mp4"
-        }
-      ]
+      "title": "Filme da Família",
+      "label": "OneDrive",
+      "icon": "movie",
+      "badge": "HD",
+      "action": "video:https://onedrive.live.com/personal/7b19b5cbe8279a27/Documents/Revis%C3%A3o%20de%20materia%20Rompimento%20e%20m%C3%A9dias%20aul%20001%20Marquinhos.mp4"
     }
   ]
 }
