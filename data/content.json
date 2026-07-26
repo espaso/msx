@@ -27,7 +27,7 @@
          "badgeColor": "#00aaff",
          "title": "Example Video",
          "playerLabel": "Dailymotion - Example Video",
-         "action": "video:https://espaso.github.io/tv/logo.png"
+         "action": "video:https://espaso.github.io/tv/logo"
       },
       {
          "badge": "{txt:msx-white:Twitch}",
