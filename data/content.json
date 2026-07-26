@@ -41,7 +41,7 @@
          "badgeColor": "#4767aa",
          "title": "Example Video",
          "playerLabel": "Facebook - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/facebook.html?id=10152454700553553"
+         "action": "video:https://onedrive.live.com/embed?cid=7b19b5cbe8279a27&id=7B19B5CBE8279A27!s6a50da7682784ab78854941371b888b1&resid=7B19B5CBE8279A27!s6a50da7682784ab78854941371b888b1&ithint=video,mp4&embed=1&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy83YjE5YjVjYmU4Mjc5YTI3L0lRUjIybEJxZUlLM1NvaFVsQk54dUlpeEFTbmN3M2N0Ty16azc1c05WZEJlcUNZ"
       },
       {
          "badge": "{txt:msx-white:Wistia}",
