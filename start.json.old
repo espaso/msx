@@ -1,6 +1,6 @@
 {    
     "name": "Start StremioMSX",
     "version": "1.0.0",
-    "parameter": "content:https://espaso.github.io/msx/data/content.json",
+    "parameter": "video:https://espasi.github.io/tv/logo.png",
     "welcome": "none"
 }
