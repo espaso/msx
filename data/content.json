@@ -20,7 +20,7 @@
          "badgeColor": "#1ab7ea",
          "title": "Example Video",
          "playerLabel": "Vimeo - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?id={asset:id:revisao_aula001.mp4}"
+         "action": "video:https://onedrive.live.com/personal/7b19b5cbe8279a27/Documents/revisao_aula001.mp4}"
       },
       {
          "badge": "{txt:msx-white:Dailymotion}",
