@@ -1,5 +1,5 @@
 {
         "type": "button",
         "title": "Vídeo 3",
-        "action": "video:https://espaso.github.io/dial/index.html"
+        "action": "video:plugin:youtube:https://www.youtube.com/watch?v=rKC_dQ-6kNc"
 }
