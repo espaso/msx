@@ -1,0 +1,6 @@
+{
+  "name": "Marcos TV",
+  "version": "1.0.0",
+  "parameter": "content:https://espaso.github.io/msx/data/content.json",
+  "welcome": "none"
+}
