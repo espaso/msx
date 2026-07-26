@@ -34,7 +34,7 @@
          "badgeColor": "#643fa6",
          "title": "Example Video",
          "playerLabel": "Twitch - Example Video",
-         "action": "video:https://onedrive.live.com/download?cid=7B19B5CBE8279A27&resid=7B19B5CBE8279A27%21105&authkey=!A"
+         "action": "video:https://drive.google.com/uc?export=download&id=1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh"
       },
       {
          "badge": "{txt:msx-white:Facebook}",
