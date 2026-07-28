@@ -2,7 +2,7 @@
   "name": "Meu Painel Web",
   "version": "1.0.0",
   "icon": "https://via.placeholder.com/150",
-  "parameter": "action:menu",
+  "parameter": "menu",
   "items": [
     {
       "type": "control",
