@@ -55,7 +55,7 @@
          "badgeColor": "#ff5500",
          "title": "Example Track",
          "playerLabel": "SoundCloud - Example Track",
-         "action": "video:plugin:http://msx.benzac.de/plugins/soundcloud.html?id=143041228"
+         "action": "link:plugin:http://espaso.github.io/dial"
       }
    ]
 }
