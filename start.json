@@ -14,7 +14,7 @@
       "type": "control",
       "label": "Minha Página HTML",
       "icon": "https://via.placeholder.com/150",
-      "action": "link:http://seu-servidor.com/pagina.html"
+      "action": "link:http://espaso.github.io/dial/"
     },
     {
       "type": "control",
