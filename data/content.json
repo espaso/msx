@@ -1,0 +1,303 @@
+{
+  "name": "Meus Favoritos",
+  "version": "1.0",
+  "pages": [
+    {
+      "items": [
+        {
+          "type": "control",
+          "label": "Documento",
+          "icon": "folder",
+          "action": "page:documento"
+        },
+        {
+          "type": "control",
+          "label": "Estudo",
+          "icon": "folder",
+          "action": "page:estudo"
+        },
+        {
+          "type": "control",
+          "label": "HITSS",
+          "icon": "folder",
+          "action": "page:hitss"
+        },
+        {
+          "type": "control",
+          "label": "Plataforma",
+          "icon": "folder",
+          "action": "page:plataforma"
+        }
+      ]
+    },
+    {
+      "name": "page:documento",
+      "headline": "Documento",
+      "items": [
+        {
+          "type": "button",
+          "label": "Documento - Despesa - Acordo Bradesco",
+          "action": "link:https://negocieipanema.com.br/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Despesa - Amil [435046454] [15440293736]",
+          "action": "link:https://www.amil.com.br/beneficiario/#/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Despesa - Light",
+          "action": "link:https://agenciavirtual.light.com.br/portal/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Despesa - Renner",
+          "action": "link:https://www.realizesolucoesfinanceiras.com.br/cartoes-renner/login"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Divida - Consulta de débitos do ipva e emissão de DARJ",
+          "action": "link:https://darj-ipva-web.fazenda.rj.gov.br/darj-ipva-web/#/resultado/00251390080"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Divida - Dívida Ativa - PGE",
+          "action": "link:https://pge.rj.gov.br/divida-ativa"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Divida - Multa [251390080] [LLG8994]",
+          "action": "link:https://www.ib7.bradesco.com.br/ibpfdetranrj/debitoVeiculoRJGrmConsultar.do"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - Detran-RJ",
+          "action": "link:https://www.detran.rj.gov.br/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - GOV.BR",
+          "action": "link:https://www.gov.br/pt-br"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - gov.br - Acesse sua conta",
+          "action": "link:https://sso.acesso.gov.br/login?client_id=mir.receita.fazenda.gov.br&authorization_id=1896f17fede"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - IRPF",
+          "action": "link:https://cav.receita.fazenda.gov.br/autenticacao"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - Portal Carioca Digital – Prefeitura da Cidade do Rio de Janeiro",
+          "action": "link:https://home.carioca.rio/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - Registrato",
+          "action": "link:https://www.bcb.gov.br/meubc/registrato"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - Regularize",
+          "action": "link:https://www.regularize.pgfn.gov.br/"
+        },
+        {
+          "type": "button",
+          "label": "Documento - Documento - Tribunal Superior Eleitoral",
+          "action": "link:https://www.tse.jus.br/"
+        }
+      ]
+    },
+    {
+      "name": "page:estudo",
+      "headline": "Estudo",
+      "items": [
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - B.Trader - YouTube",
+          "action": "link:https://www.youtube.com/@BTrader"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - B.Trader Online – Escola para operar na Bolsa de Valores",
+          "action": "link:https://online.btrader.com.br/"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - Boxzero - Vídeos de Estratégias",
+          "action": "link:https://espaso.github.io/estudo/boxzero.html"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - Checklist de Estratégias",
+          "action": "link:https://espaso.github.io/estudo/"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - Estudo - Vídeos de Estratégias",
+          "action": "link:https://espaso.github.io/estudo/estudo.html"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Mercado - LÓGICA OPERACIONAL - DESCOMPLICANDO SIMPLES",
+          "action": "link:https://sso.hotmart.com/login?service=https%3A%2F%2Flogicaoperacionaldescomplicand.club.hotmart.com&renew=true&systemOrigin=OldClub"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Tecnologia - FIAP - Nano Courses",
+          "action": "link:https://on.fiap.com.br/nano-courses/"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Tecnologia - Future School EAD - Programe-se Programando",
+          "action": "link:https://futureschoolead.com.br/#inicio"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Tecnologia - Future School EAD - YouTube",
+          "action": "link:https://www.youtube.com/@FutureSchoolEAD/playlists"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Tecnologia - Menu principal - cadcobol.com.br",
+          "action": "link:https://www.cadcobol.com.br/menuprin.htm"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Tecnologia - UDEMY - Faça login para continuar sua jornada de aprendizado",
+          "action": "link:https://www.udemy.com/join/passwordless-auth/?next=%2Fhome%2Fmy-courses%2Flearning%2F%3Fp%3D1%26sort%3Dtitle&action=login&mode"
+        },
+        {
+          "type": "button",
+          "label": "Estudo - Universidade - UVA - Portal do Aluno",
+          "action": "link:https://portalaluno.uva.br/Login"
+        }
+      ]
+    },
+    {
+      "name": "page:hitss",
+      "headline": "HITSS",
+      "items": [
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - @HOST Login",
+          "action": "link:https://host.globalhitss.com/Security/Login?ReturnUrl=%2fHoras%2fCapturaHoras2"
+        },
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - Aplicativos Oracle Fusion Cloud",
+          "action": "link:https://ipc.claro.com.br/idp/SSO.saml2?SAMLRequest=hVJbb9owFP4rkV94inOh0M0iVAwKQ4OVLWlV7c11ToglXzLbadp%2FPydQqe0Dez0%2B39VndvMiRfAMxnKtslGC41EAiumSq2M2ui%2FW4ZfRzXxmqRQNWbSuVr%2FhbwvWBR6nLBkeMtQaRTS13BJFJVjiGMkX%2Bx1JcUwao51mWqAz5MXyDNXONSSKuq7D3Rhrc4zSOE6ix%2F0uZzVIGnJlHVUMULDWhsEgnaGKCutHhzPlN64Goxf1n05LlnwvikN4uMsLFGxXGeJlWC%2FZJpQhrMX1clJupNj9SpNwv4Pb8bgqnpcF%2FTF9vFIbFDycG0Ke0cOtbWE7OHR%2BFKeTMP4appMiuSbjKZlM%2F6Bg5UviiroB1ce1Pi9vGGaCGo2ZlvjJRLxsojy%2Fw32PKToVTQZ6867hywGptWB6naErSd3l9X7is1fDKgHluHtF8zeHdcklFvrIFW5t6n%2BGMgFM6LbsLUcVlLPoncm30%2FjpSbergxacvf7XRYKTTy5aZRtgvOJQomAhhO6WBqiDDDnTAormJ9GPJzgl%3D%3D&RelayState=id-rP-qLRODDKyUOgBXoldAilr8uCLNPzn9VExuU9c-&SigAlg=http%3A%2F%2Fwww.w3.org%2F2001%2F04%2Fxmldsig-more%23rsa-sha256&Signature=VP4mrBAzxji2GCK%2FAjvAvuCUp2HdxkdXJyZfia4OJX4nI8oZP%2ByHbe%2FfKRSRBgFYw5bCu1hs0CPrvrkqa1CtGnFIPfI217LjsN215CfRVMivVxTJShg5xEyxsWDS3TcTWAVlpfL7PNc2wt2X8LM1DbTELloJpKwFP9pbp0gpbnFVSnUKf5Vafc523FC6eaQ26KggpQzfurL%2B8vrODIP4Gh3SNF1cFoqLxW6qskQ7tDWivsGEElNAD1%2BhC58yS9THo4JxPP4S75pvIcu96YIC1OGt59k%2FQd9%2BLw1xaX8uyUHmGhcGLXO5g1KfS%2F%2FG0KzqeLgawsse0BntfYmyAIWHLNXS%2F%2BmrwdmCAjNn%2Fsbxb4VUl65vMNH66Hu9LHqENfGW0yDBvne0LiczSQe%2FT89CZ%2FTSscTqzLk49%2BKJPx5t%2FSB2UwlT%2FXGpfQWZWDZjmHoSw0U1HQUPI%2FwOItJmMLNpv9cOlx%2Bg7ZbB4kzX982tn%2BZWnGCjGbYi84vY2b0GALS4"
+        },
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - Email - Marcos De Franca Santos - Outlook",
+          "action": "link:https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9199bf20-a13f-4107-85dc-02114787ef48&scope=https%3A%2F%2Foutlook.office.com%2F.default%20openid%20profile%20offline_access&redirect_uri=https%3A%2F%2Foutlook.office.com%2Fmail%2F&client-request-id=46ab6ed5-6d13-0145-1256-624697829384&response_mode=fragment&client_info=1&prompt=select_account&nonce=019981f4-5402-726a-bd87-505d15a3e2f3&state=eyJpZCI6IjAxOTk4MWY0LTU0MDItNzc2Zi05ODc2LTgyYWZmZWYzZDU0YiIsIm1ldGEiOnsiaW50ZXJhY3Rpb25UeXBlIjoicmVkaXJlY3QifX0%3D%7CaHR0cHM6Ly9vdXRsb29rLm9mZmljZS5jb20vbWFpbC8_Y2M9ZXlKaFkyTmxjM05mZEc5clpXNGlPbnNpYm1KbUlqcDdJbVZ6YzJWdWRHbGhiQ0k2ZEhKMVpTd2lkbUZzZFdVaU9pSXhOelF6TURRME16VXlJbjBzSW5odGMxOWpZeUk2ZXlKMllXeDFaWE1pT2xzaVExQXhJbDE5ZlN3aWFXUmZkRzlyWlc0aU9uc2libUptSWpwN0ltVnpjMlZ1ZEdsaGJDSTZkSEoxWlN3aWRtRnNkV1VpT2lJeE56UXpNRFEwTXpVeUluMHNJbmh0YzE5all5STZleUoyWVd4MVpYTWlPbHNpUTFBeElsMTlmXDA&claims=%7B%22access_token%22%3A%7B%22xms_cc%22%3A%7B%22values%22%3A%5B%22CP1%22%5D%7D%7D%7D&x-client-SKU=msal.js.browser&x-client-VER=4.14.0&response_type=code&code_challenge=vq0pgdeLEr89SuY1x0esF_1ylmRXCIwX-iHwd322qeY&code_challenge_method=S256"
+        },
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - Portal do Colaborador GLOBAL HITSS",
+          "action": "link:https://login.microsoftonline.com/d6c7d4eb-ad17-46c8-a404-f6a92cbead96/oauth2/v2.0/authorize?client_id=9205b0ac-8e81-4326-9d0a-78219f6b9388&response_type=code&redirect_uri=https://portaldocolaborador.globalhitss.com.br&response_mode=query&scope=offline_access%20user.read%20mail.read&state=ACCESSOK"
+        },
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - Portal Orhganiza",
+          "action": "link:https://pontodigital.globalhitss.com.br/entrar"
+        },
+        {
+          "type": "button",
+          "label": "HITSS - HITSS - Rhevolution",
+          "action": "link:https://login.microsoftonline.com/d6c7d4eb-ad17-46c8-a404-f6a92cbead96/oauth2/authorize?response_type=code&client_id=60b44b54-7af8-416e-8d7b-e4a612d75a1f&scope=openid&nonce=3305a6a9-92d7-4f19-83ca-9a36b507dc8b&redirect_uri=https%3a%2f%2fportalrh.globalhitss.com.br%2f&state=AppProxyState%3a%7b%22InvalidTokenRetry%22%3anull%2c%22IsMsofba%22%3afalse%2c%22OriginalRawUrl%22%3a%22https%3a%5c%2f%5c%2fportalrh.globalhitss.com.br%5c%2fords%5c%2frhportal%5c%2frhlgweb.show%22%2c%22RequestProfileId%22%3anull%2c%22SessionId%22%3a%221b3b00d9-9c37-4b28-9287-9ceb0a2a3762%22%7d%23EndOfStateParam%23&client-request-id=1b3b00d9-9c37-4b28-9287-9ceb0a2a3762&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d"
+        }
+      ]
+    },
+    {
+      "name": "page:plataforma",
+      "headline": "Plataforma",
+      "items": [
+        {
+          "type": "button",
+          "label": "Plataforma - Conexao - Gateway Wireless",
+          "action": "link:http://10.68.63.1/#/login"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Conexao - Provedores de DNS conhecidos - AdGuard DNS Knowledge Base",
+          "action": "link:https://adguard-dns.io/kb/pt-BR/general/dns-providers/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Corretora - Investimento em Ações - Zero Markets - Forex Broker",
+          "action": "link:https://www.zeromarkets.com/pt-br/levycam/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Corretora - Toro Investimentos - O seu melhor jeito de investir",
+          "action": "link:https://www.toroinvestimentos.com.br/trader/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - Log in to the Bitly Connections Platform",
+          "action": "link:https://bitly.com/a/sign_in?rd=%2FBlbickT0GQj%2Fhome"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - Mixer e conversor de áudio online",
+          "action": "link:https://www.audio2edit.com/pt"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - Personal Data Leak Checker Your Email Data",
+          "action": "link:https://cybernews.com/personal-data-leak-check/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - PNG para PDF converta online e grátis com Adobe Acrobat",
+          "action": "link:https://www.adobe.com/br/acrobat/online/png-to-pdf.html"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - Site Confiável. Vai comprar Verifique se o site é confiável.",
+          "action": "link:https://www.siteconfiavel.com.br/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Ferramenta - Y2meta - Baixador do YouTube",
+          "action": "link:https://y2meta.is/pt69/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Repositorio - Github - espaso",
+          "action": "link:https://github.com/espaso"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Repositorio - Github - estoke",
+          "action": "link:https://github.com/estoke"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Tecnologia - ChatGPT",
+          "action": "link:https://chatgpt.com/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Tecnologia - Claude",
+          "action": "link:https://claude.ai/new"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Tecnologia - Copilot",
+          "action": "link:https://copilot.microsoft.com/"
+        },
+        {
+          "type": "button",
+          "label": "Plataforma - Tecnologia - Gemini",
+          "action": "link:https://gemini.google.com/"
+        }
+      ]
+    }
+  ]
+}
