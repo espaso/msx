@@ -13,7 +13,7 @@
          "badgeColor": "#ff0000",
          "title": "Example Video",
          "playerLabel": "YouTube - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/youtube.html?id=rKC_dQ-6kNc"
+         "action": "video:https://espaso.gothub.io/tv/logo.png"
       },
       {
          "badge": "{txt:msx-white:Vimeo}",
