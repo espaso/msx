@@ -27,7 +27,7 @@
          "badgeColor": "#00aaff",
          "title": "Example Video",
          "playerLabel": "Dailymotion - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://drive.google.com/file/d/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh/view"
+         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://espaso.gothub.io/tv/logo.png"
       },
       {
          "badge": "{txt:msx-white:Twitch}",
@@ -55,7 +55,7 @@
          "badgeColor": "#ff5500",
          "title": "Example Track",
          "playerLabel": "SoundCloud - Example Track",
-         "action": "link:plugin:http://espaso.github.io/dial"
+         "action": "link:http://espaso.github.io/dial"
       }
    ]
 }
