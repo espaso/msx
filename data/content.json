@@ -12,7 +12,7 @@
       {
          "title": "Video 1",
          "playerLabel": "Video 1",
-         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://1drv.ms/v/c/7ABCE8B7826547EF/IQBlDypK9_MjQocaDlLs8TrEAeYxuI4kyqeXrG7bLyvE4yU"
+         "action": "video:https://vimeo.com/1213799663?share=copy"
       },
       {
          "title": "Video 2",
