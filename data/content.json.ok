@@ -13,7 +13,7 @@
          "badgeColor": "#ff0000",
          "title": "Example Video",
          "playerLabel": "YouTube - Example Video",
-         "action": "video:https://espaso.github.io/tv/logo.png"
+         "action": "video:https://espaso.github.io/tv/logo"
       },
       {
          "badge": "{txt:msx-white:Vimeo}",
@@ -27,14 +27,14 @@
          "badgeColor": "#00aaff",
          "title": "Example Video",
          "playerLabel": "Dailymotion - Example Video",
-         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://espaso.github.io/tv/logo.png"
+         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://espaso.github.io/tv/logo"
       },
       {
          "badge": "{txt:msx-white:Twitch}",
          "badgeColor": "#643fa6",
          "title": "Example Video",
          "playerLabel": "Twitch - Example Video",
-         "action": "video:https://drive.google.com/file/d/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh/view"
+         "action": "video:https://drive.google.com/file/d/1SfSF4rlnMq2DkecptVGpWWoUPvaQ5eXh/preview"
       },
       {
          "badge": "{txt:msx-white:Facebook}",
