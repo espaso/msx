@@ -12,12 +12,12 @@
       {
          "title": "Video 1",
          "playerLabel": "Video 1",
-         "action": "video:https://1drv.ms/v/c/7ABCE8B7826547EF/IQDQ4CPgc0jPR6IwNu-_W23eAZflaP7bhiSTA5ZvvIdMrTY"
+         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://1drv.ms/v/c/7ABCE8B7826547EF/IQDQ4CPgc0jPR6IwNu-_W23eAZflaP7bhiSTA5ZvvIdMrTY"
       },
       {
          "title": "Video 2",
          "playerLabel": "Video 2",
-         "action": "video:https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F7ABCE8B7826547EF%21se023e0d0487347cfa23036efbf5b6dde%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=7ABCE8B7826547EF&id=7ABCE8B7826547EF%21se023e0d0487347cfa23036efbf5b6dde&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy83QUJDRThCNzgyNjU0N0VGL0lRRFE0Q1BnYzBqUFI2SXdOdS1fVzIzZUFaZmxhUDdiaGlTVEE1WnZ2SWRNclRZ&v=photos"
+         "action": "video:plugin:http://msx.benzac.de/plugins/html5x.html?url=https://onedrive.live.com/?qt=allmyphotos&photosData=%2Fshare%2F7ABCE8B7826547EF%21se023e0d0487347cfa23036efbf5b6dde%3Fithint%3Dvideo%26migratedtospo%3Dtrue&cid=7ABCE8B7826547EF&id=7ABCE8B7826547EF%21se023e0d0487347cfa23036efbf5b6dde&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy83QUJDRThCNzgyNjU0N0VGL0lRRFE0Q1BnYzBqUFI2SXdOdS1fVzIzZUFaZmxhUDdiaGlTVEE1WnZ2SWRNclRZ&v=photos"
       },
       {
          "title": "Video 3",
