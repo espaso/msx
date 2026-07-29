@@ -12,7 +12,7 @@
       {
          "title": "Video 1",
          "playerLabel": "Video 1",
-         "action": "video:https://vimeo.com/1213799663?share=copy"
+         "action": "video:plugin:http://msx.benzac.de/plugins/vimeo.html?id=5480220:https://vimeo.com/1213799663?share=copy"
       },
       {
          "title": "Video 2",
@@ -22,7 +22,7 @@
       {
          "title": "Video 3",
          "playerLabel": "Video 3",
-         "action": "video:https://1drv.ms/v/c/7ABCE8B7826547EF/IQBlDypK9_MjQocaDlLs8TrEAeYxuI4kyqeXrG7bLyvE4yU"
+         "action": "video:plugin:http://msx.benzac.de/plugins/vimeo.html?id=1213799663"
       },
       {
          "title": "Video 4",
