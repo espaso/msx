@@ -4,7 +4,7 @@
    "template": {
       "tag": "Web",
       "type": "separate",
-      "layout": "0,0,3,3",
+      "layout": "0,0,16,9",
       "icon": "msx-white-soft:movie",
       "color": "msx-glass"
    },
